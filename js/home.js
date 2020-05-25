@@ -46,6 +46,7 @@ function OnDiceClick(diceSides)
 	HRoll();
 }
 
+var UIModeSet = false;
 function OnResize() {
 	//select things to mod
 	var viewrapper = document.getElementById("viewwrapper");
@@ -53,35 +54,41 @@ function OnResize() {
 	var rollcontrols = document.getElementById("rollcontrols");
 
 	// switch to pc layout
+	var desktopUI = false;
+	
 	if(window.innerHeight < window.innerWidth)
 	{
-		if(rolloutput.classList.contains("rolloutput_phone") === true)
+		desktopUI = true;
+	}
+	
+	if(desktopUI === true)
+	{
+		if(UIModeSet === true)
 		{
 			viewrapper.classList.remove("viewrapper_phone");
-			viewrapper.classList.add("viewrapper_desktop");
-		
-			rolloutput.classList.add("rolloutput_desktop");
-			rollcontrols.classList.add("rollcontrols_desktop");
-		
 			rolloutput.classList.remove("rolloutput_phone");
 			rollcontrols.classList.remove("rollcontrols_phone");
 		}
+	
+		viewrapper.classList.add("viewrapper_desktop");
+		rolloutput.classList.add("rolloutput_desktop");
+		rollcontrols.classList.add("rollcontrols_desktop");
 	}
 	// default: use phone layout
-	else 
-	{	
-		if(rolloutput.classList.contains("rolloutput_phone") === false)
+	else {
+		if(UIModeSet === true)
 		{
-			viewrapper.classList.add("viewrapper_phone");
 			viewrapper.classList.remove("viewrapper_desktop");
-		
 			rolloutput.classList.remove("rolloutput_desktop");
-			rollcontrols.classList.remove("rollcontrols_desktop");
-		
-			rolloutput.classList.add("rolloutput_phone");
-			rollcontrols.classList.add("rollcontrols_phone");
+		rollcontrols.classList.remove("rollcontrols_desktop");
 		}
+		
+		viewrapper.classList.add("viewrapper_phone");
+		rolloutput.classList.add("rolloutput_phone");
+		rollcontrols.classList.add("rollcontrols_phone");
 	}
+	
+	UIModeSet = true;
 }
 
 // SET UP
