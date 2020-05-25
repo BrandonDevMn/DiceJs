@@ -9,7 +9,8 @@ html, body
 .diceicon
 {
 	width: 20%;
-	height: 40%
+	height: 35%;
+	border: 5px solid transparent;
 }
 
 #rollresult
@@ -35,5 +36,5 @@ html, body
 
 .selectedDice
 {
-	border: 5px solid black;
+	border-color: black;
 }
