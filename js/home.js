@@ -87,6 +87,7 @@ function OnResize() {
 // SET UP
 window.addEventListener('load', function () {
 	OnResize();
+	HRoll();
 })
 window.addEventListener("resize", OnResize);
 document.ontouchmove = function(e){ e.preventDefault(); }
