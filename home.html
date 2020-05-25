@@ -1,0 +1,31 @@
+<!-- The main and probably only page of JsDice -->
+<html>
+	<!-- head of the doc -->
+	<head>
+		<!-- configure -->
+		<title>JsDice</title>
+		<link rel="icon" href="./img/icon.JPG">
+		<link rel="apple-touch-icon" href="./img/icon.JPG">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
+		<!-- imports -->
+		<script src="./js/home.js"></script>
+		<script src="./js/dice.js"></script>
+	</head>	
+	<!-- body of the doc -->
+	<body>
+		<!-- view wrapper -->
+		<div>
+			<!-- controls -->
+			<div>
+				<button onclick='HRoll(1, 6)'>roll D6</button>
+			</div>
+			<!-- output view -->
+			<div>
+				<div id="rollresult"></div>
+				<div id="dicetype"></div>
+				<div id="timestamp"></div>
+			</div>
+		</div>
+	</body>
+</html>
