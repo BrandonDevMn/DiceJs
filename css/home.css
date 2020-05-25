@@ -3,19 +3,26 @@ html, body
 	margin: 0; 
 	height: 100%; 
 	overflow: hidden;
-	touch-action: manipulation;
+	touch-action: none;
+}
+
+.diceicon
+{
+	width: 25%;
+	height: 40%;
 }
 
 .rolloutput
 {
-	height: 80%;
+	height: 70%;
 	display: block;
 	text-align: center;
+	border: 5px solid black;
 }
 
 .rollcontrols
 {
-	height: 20%;
+	height: 24%;
 	display: block;
 	text-align: center;
 	border: 10px solid black;

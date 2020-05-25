@@ -18,14 +18,23 @@
 		<!-- view wrapper -->
 		<div>
 			<!-- output view -->
-			<div class="rolloutput">
+			<div class="rolloutput" onclick="HRoll(6)">
 				<div id="rollresult"></div>
 				<div id="dicetype"></div>
 				<div id="timestamp"></div>
 			</div>
 			<!-- controls -->
 			<div class="rollcontrols">
-				<button onclick='HRoll(1, 6)'>roll D6</button>
+				<div class="slidecontainer">
+				<input type="range" min="1" max="100" value="1" class="slider" id="diceCntSlider" oninput="OnSlide()" >
+				<label id="sliderlabel">1</label>
+				</div>
+				<img src="./img/dice/d4.png" class="d4icon diceicon">
+				<img src="./img/dice/d6.png" class="d6icon diceicon">
+				<img src="./img/dice/d8.png" class="d8icon diceicon">
+				<img src="./img/dice/d10.png" class="d10icon diceicon">
+				<img src="./img/dice/d12.png" class="d12icon diceicon">
+				<img src="./img/dice/d20.png" class="d20icon diceicon">
 			</div>
 		</div>
 	</body>

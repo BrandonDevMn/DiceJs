@@ -1,8 +1,9 @@
 document.ontouchmove = function(e){ e.preventDefault(); }
 
 //function to roll and update the UI
-function HRoll(diceCnt, diceSides)
+function HRoll(diceSides)
 {
+	var diceCnt = document.getElementById("diceCntSlider").value;
 	var random = Roll(diceCnt, diceSides);
 	
 	document.getElementById("rollresult").innerHTML = random;
@@ -23,4 +24,10 @@ function Roll(diceCnt, diceSides)
 	}
 	
 	return random;
+}
+
+function OnSlide() 
+{
+	var val = document.getElementById("diceCntSlider").value;
+	document.getElementById("sliderlabel").innerHTML = val;
 }
