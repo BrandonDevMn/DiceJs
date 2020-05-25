@@ -17,7 +17,7 @@
 		<!-- view wrapper -->
 		<div>
 			<!-- output view -->
-			<div class="rolloutput" onclick="HRoll(6)">
+			<div class="rolloutput" onclick="HRoll()">
 				<div id="rollresult"></div>
 				<div id="dicetype"></div>
 				<div id="timestamp"></div>
@@ -28,12 +28,12 @@
 				<input type="range" min="1" max="100" value="1" class="slider" id="diceCntSlider" oninput="OnSlide()" >
 				<label id="sliderlabel">1</label>
 				</div>
-				<img src="./img/dice/d4.png" class="d4icon diceicon">
-				<img src="./img/dice/d6.png" class="d6icon diceicon">
-				<img src="./img/dice/d8.png" class="d8icon diceicon">
-				<img src="./img/dice/d10.png" class="d10icon diceicon">
-				<img src="./img/dice/d12.png" class="d12icon diceicon">
-				<img src="./img/dice/d20.png" class="d20icon diceicon">
+				<img src="./img/dice/d4.png" id="d4icon" class="diceicon" onclick="OnDiceClick(4)">
+				<img src="./img/dice/d6.png" id="d6icon" class="diceicon" onclick="OnDiceClick(6)" >
+				<img src="./img/dice/d8.png" id="d8icon" class="diceicon" onclick="OnDiceClick(8)">
+				<img src="./img/dice/d10.png" id="d10icon" class="diceicon" onclick="OnDiceClick(10)" >
+				<img src="./img/dice/d12.png" id="d12icon" class="diceicon" onclick="OnDiceClick(12)" >
+				<img src="./img/dice/d20.png" id="d20icon" class="diceicon selectedDice" onclick="OnDiceClick(20)" >
 			</div>
 		</div>
 	</body>

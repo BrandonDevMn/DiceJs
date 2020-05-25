@@ -27,3 +27,8 @@ html, body
 	text-align: center;
 	border: 10px solid black;
 }
+
+.selectedDice
+{
+	border: 5px solid black;
+}

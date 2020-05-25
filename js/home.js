@@ -1,13 +1,14 @@
 document.ontouchmove = function(e){ e.preventDefault(); }
+var currentDiceSides = 20;
 
 //function to roll and update the UI
-function HRoll(diceSides)
+function HRoll()
 {
 	var diceCnt = document.getElementById("diceCntSlider").value;
-	var random = Roll(diceCnt, diceSides);
+	var random = Roll(diceCnt, currentDiceSides);
 	
 	document.getElementById("rollresult").innerHTML = random;
-	document.getElementById("dicetype").innerHTML = diceCnt + "d" + diceSides;
+	document.getElementById("dicetype").innerHTML = diceCnt + "d" + currentDiceSides;
 	
 	var today = new Date();
 	
@@ -30,4 +31,20 @@ function OnSlide()
 {
 	var val = document.getElementById("diceCntSlider").value;
 	document.getElementById("sliderlabel").innerHTML = val;
+}
+
+function OnDiceClick(diceSides) 
+{
+	currentDiceSides = diceSides;
+
+	var oldDice = document.getElementsByClassName("selectedDice")[0];
+	
+	oldDice.classList.remove("selectedDice");
+
+	var selDice = document.getElementById("d" + diceSides + "icon");
+	
+	selDice.classList.add("selectedDice");
+	
+	
+	HRoll();
 }
