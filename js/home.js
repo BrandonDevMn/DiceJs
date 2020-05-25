@@ -1,4 +1,18 @@
+//function to roll and update the UI
 function HRoll(diceCnt, diceSides)
+{
+	var random = Roll(diceCnt, diceSides);
+	
+	document.getElementById("rollresult").innerHTML = random;
+	document.getElementById("dicetype").innerHTML = diceCnt + "d" + diceSides;
+	
+	var today = new Date();
+	
+	document.getElementById("timestamp").innerHTML = today;
+}
+
+// function to sim rolling a dice
+function Roll(diceCnt, diceSides)
 {
 	var random = 0;
 	
@@ -6,10 +20,5 @@ function HRoll(diceCnt, diceSides)
   	random += Math.floor(Math.random() * diceSides) + 1;
 	}
 	
-	document.getElementById("rollresult").innerHTML = random;
-	document.getElementById("dicetype").innerHTML = diceCnt + "d" + diceSides;
-	
-	var today = new Date();
-	
-	document.getElementById("timestamp").innerHTML = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+	return random;
 }
