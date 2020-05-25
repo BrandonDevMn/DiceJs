@@ -15,15 +15,15 @@
 	<!-- body of the doc -->
 	<body>
 		<!-- view wrapper -->
-		<div>
+		<div id="viewwrapper">
 			<!-- output view -->
-			<div class="rolloutput" onclick="HRoll()">
+			<div id="rolloutput" onclick="HRoll()">
 				<div id="rollresult"></div>
 				<div id="dicetype"></div>
 				<div id="timestamp"></div>
 			</div>
 			<!-- controls -->
-			<div class="rollcontrols">
+			<div id="rollcontrols">
 				<div class="slidecontainer">
 				<input type="range" min="1" max="100" value="1" class="slider" id="diceCntSlider" oninput="OnSlide()" >
 				<label id="sliderlabel">1</label>

@@ -6,6 +6,16 @@ html, body
 	touch-action: none;
 }
 
+.viewrapper_phone
+{
+
+}
+
+.viewrapper_desktop
+{
+	display: flexbox;
+}
+
 .diceicon
 {
 	width: 20%;
@@ -18,17 +28,39 @@ html, body
 	font-size: 20em;
 }
 
-.rolloutput
+.rolloutput_phone
 {
 	height: 70%;
+}
+
+.rolloutput_desktop
+{
+	background-color: purple;
+	float: right;
+	width: 70%;
+}
+
+#rolloutput
+{
 	display: block;
 	text-align: center;
 	border: 5px solid black;
 }
 
-.rollcontrols
+.rollcontrols_phone
 {
 	height: 24%;
+}
+
+.rollcontrols_desktop
+{
+	background-color: purple;
+	float: left;
+	width: 20%;
+}
+
+#rollcontrols
+{
 	display: block;
 	text-align: center;
 	border: 10px solid black;
