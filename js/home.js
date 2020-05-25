@@ -1,3 +1,5 @@
+document.ontouchmove = function(e){ e.preventDefault(); }
+
 //function to roll and update the UI
 function HRoll(diceCnt, diceSides)
 {

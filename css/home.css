@@ -2,5 +2,21 @@ html, body
 {
 	margin: 0; 
 	height: 100%; 
-	overflow: hidden
+	overflow: hidden;
+	touch-action: manipulation;
+}
+
+.rolloutput
+{
+	height: 80%;
+	display: block;
+	text-align: center;
+}
+
+.rollcontrols
+{
+	height: 20%;
+	display: block;
+	text-align: center;
+	border: 10px solid black;
 }

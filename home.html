@@ -11,20 +11,21 @@
 		<!-- imports -->
 		<script src="./js/home.js"></script>
 		<script src="./js/dice.js"></script>
+		<link rel="stylesheet" type="text/css" href="./css/home.css" />
 	</head>	
 	<!-- body of the doc -->
 	<body>
 		<!-- view wrapper -->
 		<div>
-			<!-- controls -->
-			<div>
-				<button onclick='HRoll(1, 6)'>roll D6</button>
-			</div>
 			<!-- output view -->
-			<div>
+			<div class="rolloutput">
 				<div id="rollresult"></div>
 				<div id="dicetype"></div>
 				<div id="timestamp"></div>
+			</div>
+			<!-- controls -->
+			<div class="rollcontrols">
+				<button onclick='HRoll(1, 6)'>roll D6</button>
 			</div>
 		</div>
 	</body>
