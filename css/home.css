@@ -12,6 +12,11 @@ html, body
 	height: 40%;
 }
 
+#rollresult
+{
+	font-size: 20em;
+}
+
 .rolloutput
 {
 	height: 70%;
