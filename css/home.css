@@ -1,5 +1,6 @@
-body 
+html, body 
 {
-	"height": "150%";
-	"width": "150%"
+	margin: 0; 
+	height: 100%; 
+	overflow: hidden
 }
