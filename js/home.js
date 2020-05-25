@@ -10,9 +10,9 @@ function HRoll()
 	document.getElementById("rollresult").innerHTML = random;
 	document.getElementById("dicetype").innerHTML = diceCnt + "d" + currentDiceSides;
 	
-	var today = new Date();
+	var d = new Date();
 	
-	document.getElementById("timestamp").innerHTML = today;
+	document.getElementById("timestamp").innerHTML = d.toLocaleTimeString();
 }
 
 // function to sim rolling a dice
