@@ -2,27 +2,32 @@
 function HRoll()
 {
 	var diceCnt = document.getElementById("diceCntSlider").value;
-	var random = Roll(diceCnt, currentDiceSides);
+	var rollResult = Roll(diceCnt, currentDiceSides);
 	
 	var diceName = diceCnt + "d" + currentDiceSides;
 	var rollTime = new Date().toLocaleTimeString();
 	
-	document.getElementById("rollresult").innerHTML = random;
 	document.getElementById("dicetype").innerHTML = diceName;
 	document.getElementById("timestamp").innerHTML = rollTime;
-	document.getElementById("rolltotal").innerHTML = random;
+	document.getElementById("rolltotal").innerHTML = rollResult.total;
+	
+	document.getElementById("rollresult").innerHTML = rollResult.total;
 }
 
 // function to sim rolling a dice
 function Roll(diceCnt, diceSides)
 {
-	var random = 0;
+	var result = {};
+	result.rolls = [];
+	result.total = 0;
 	
 	for (var i = 0; i < diceCnt; i++) { 
-  	random += Math.floor(Math.random() * diceSides) + 1;
+  	var roll = Math.floor(Math.random() * diceSides) + 1;
+  	result.rolls.push(roll);
+  	result.total += roll;
 	}
 	
-	return random;
+	return result;
 }
 
 function OnSlide() 
