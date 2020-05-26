@@ -26,6 +26,19 @@ html, body
 #rollresult
 {
 	font-size: 20em;
+	height: 90%;
+}
+
+#rollmeta
+{
+	display: flexbox;
+	height: 10%;
+}
+
+.rollmetanode
+{
+	float: left;
+	padding-left: 2%;
 }
 
 .rolloutput_phone
