@@ -4,12 +4,13 @@ function HRoll()
 	var diceCnt = document.getElementById("diceCntSlider").value;
 	var random = Roll(diceCnt, currentDiceSides);
 	
+	var diceName = diceCnt + "d" + currentDiceSides;
+	var rollTime = new Date().toLocaleTimeString();
+	
 	document.getElementById("rollresult").innerHTML = random;
-	document.getElementById("dicetype").innerHTML = diceCnt + "d" + currentDiceSides;
-	
-	var d = new Date();
-	
-	document.getElementById("timestamp").innerHTML = d.toLocaleTimeString();
+	document.getElementById("dicetype").innerHTML = diceName;
+	document.getElementById("timestamp").innerHTML = rollTime;
+	document.getElementById("rolltotal").innerHTML = random;
 }
 
 // function to sim rolling a dice
