@@ -34,7 +34,8 @@ function Roll(diceCnt, diceSides)
 	result.rolls = [];
 	result.total = 0;
 	
-	for (var i = 0; i < diceCnt; i++) { 
+	var i;
+	for (i = 0; i < diceCnt; i++) { 
   	var roll = Math.floor(Math.random() * diceSides) + 1;
   	result.rolls.push(roll);
   	result.total += roll;
@@ -90,9 +91,9 @@ function OnResize() {
 		}
 	
 		var dice = document.getElementsByClassName("diceicon_phone");
-			for(var i = 0; i < dice.length; i++)
+			while(dice.length > 0)
 			{
-				var curdice = dice[i];
+				var curdice = dice[0];
 				curdice.classList.remove("diceicon_phone");
 				curdice.classList.add("diceicon_desktop");
 			}
@@ -111,9 +112,9 @@ function OnResize() {
 		}
 		
 		var dice = document.getElementsByClassName("diceicon_desktop");
-			for(var i = 0; i < dice.length; i++)
+			while(dice.length > 0)
 			{
-				var curdice = dice[i];
+				var curdice = dice[0];
 				curdice.classList.add("diceicon_phone");
 				curdice.classList.remove("diceicon_desktop");
 			}
