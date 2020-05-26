@@ -16,6 +16,13 @@ html, body
 	display: flexbox;
 }
 
+.diceicon_desktop
+{
+	width: 40%;
+	height: 20%;
+	border: 5px solid transparent;
+}
+
 .diceicon_phone
 {
 	width: 20%;
