@@ -11,7 +11,20 @@ function HRoll()
 	document.getElementById("timestamp").innerHTML = rollTime;
 	document.getElementById("rolltotal").innerHTML = rollResult.total;
 	
-	document.getElementById("rollresult").innerHTML = rollResult.total;
+	var html = "";
+	if(rollResult.rolls.length == 1)
+	{
+		html += "<div class='rollresultnodesingle'>" + rollResult.total + "</div>";
+	}
+	else 
+	{
+		for (var i = 0; i < rollResult.rolls.length; i++) { 
+  		var roll = rollResult.rolls[i];
+  		html += "<div class='rollresultnode'>" + roll + "</div>";
+		}
+	}
+	
+	document.getElementById("rollresult").innerHTML = html;
 }
 
 // function to sim rolling a dice
