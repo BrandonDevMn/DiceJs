@@ -89,6 +89,14 @@ function OnResize() {
 			rollcontrols.classList.remove("rollcontrols_phone");
 		}
 	
+		var dice = document.getElementsByClassName("diceicon_phone");
+			for(var i = 0; i < dice.length; i++)
+			{
+				var curdice = dice[i];
+				curdice.classList.remove("diceicon_phone");
+				curdice.classList.add("diceicon_desktop");
+			}
+		
 		viewrapper.classList.add("viewrapper_desktop");
 		rolloutput.classList.add("rolloutput_desktop");
 		rollcontrols.classList.add("rollcontrols_desktop");
@@ -99,8 +107,16 @@ function OnResize() {
 		{
 			viewrapper.classList.remove("viewrapper_desktop");
 			rolloutput.classList.remove("rolloutput_desktop");
-		rollcontrols.classList.remove("rollcontrols_desktop");
+			rollcontrols.classList.remove("rollcontrols_desktop");
 		}
+		
+		var dice = document.getElementsByClassName("diceicon_desktop");
+			for(var i = 0; i < dice.length; i++)
+			{
+				var curdice = dice[i];
+				curdice.classList.add("diceicon_phone");
+				curdice.classList.remove("diceicon_desktop");
+			}
 		
 		viewrapper.classList.add("viewrapper_phone");
 		rolloutput.classList.add("rolloutput_phone");
