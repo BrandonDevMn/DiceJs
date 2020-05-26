@@ -135,3 +135,10 @@ window.addEventListener('load', function () {
 window.addEventListener("resize", OnResize);
 document.ontouchmove = function(e){ e.preventDefault(); }
 var currentDiceSides = 20;
+document.body.onkeyup = function(e) 
+{
+	if(e.keyCode == 32)
+	{
+		HRoll();
+	}
+}
