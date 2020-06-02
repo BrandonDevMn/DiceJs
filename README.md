@@ -1,3 +1,3 @@
 # DiceJs
 
-live url: https://jsdice.imfast.io/home.html
+live url: https://dicejs.imfast.io/home.html
