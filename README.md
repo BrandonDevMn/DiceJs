@@ -1,2 +1,2 @@
 # DiceJs
-Test dice js
+live url: https://brandondevmn.github.io/DiceJs/
