@@ -1,8 +1,51 @@
+<!-- The main and probably only page of JsDice -->
 <html>
+	<!-- head of the doc -->
+	<head>
+		<!-- configure -->
+		<title>DiceJs</title>
+		<link rel="icon" href="./img/icon.JPG">
+		<link rel="apple-touch-icon" href="./img/icon.JPG">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
+		<!-- imports -->
+		<script src="./js/home.js"></script>
+		<link rel="stylesheet" type="text/css" href="./css/home.css" />
+	</head>	
+	<!-- body of the doc -->
 	<body>
-		<div>loading...</div>
-		<script>
-			window.location.href = "./dicejs_v1/index.html";
-		</script>
+		<!-- view wrapper -->
+		<div id="viewwrapper">
+			<!---->
+			<div>
+				<div onclick="window.location.href='../dicejs_v2/index.html';">v2</div>
+			</div>
+			<!-- output view -->
+			<div id="rolloutput" onclick="HRoll()">
+				<!-- the roll itself -->
+				<div id="rollresult"></div>
+				<!-- the rolls meta data -->
+				<div id="rollmeta">
+					<div id="dicetype" class="rollmetanode"></div>
+					<div id="rolltotal" class="rollmetanode"></div>
+					<div id="timestamp" class="rollmetanode"></div>
+				</div>
+			</div>
+			<!-- controls -->
+			<div id="rollcontrols">
+				<div class="slidecontainer">
+				<input type="range" min="1" max="20" value="1" class="slider" id="diceCntSlider" oninput="OnSlide()" >
+				<label id="sliderlabel">1</label>
+				</div>
+				<img src="./img/dice/d2.png" id="d2icon" class="diceicon_phone" onclick="OnDiceClick(2)">
+				<img src="./img/dice/d4.png" id="d4icon" class="diceicon_phone" onclick="OnDiceClick(4)">
+				<img src="./img/dice/d6.png" id="d6icon" class="diceicon_phone" onclick="OnDiceClick(6)" >
+				<img src="./img/dice/d8.png" id="d8icon" class="diceicon_phone" onclick="OnDiceClick(8)">
+				<img src="./img/dice/d10.png" id="d10icon" class="diceicon_phone" onclick="OnDiceClick(10)" >
+				<img src="./img/dice/d12.png" id="d12icon" class="diceicon_phone" onclick="OnDiceClick(12)" >
+				<img src="./img/dice/d20.png" id="d20icon" class="diceicon_phone selectedDice" onclick="OnDiceClick(20)" >
+				<img src="./img/dice/d100.png" id="d100icon" class="diceicon_phone" onclick="OnDiceClick(100)">
+			</div>
+		</div>
 	</body>
 </html>
